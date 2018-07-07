@@ -1,0 +1,29 @@
+$primary: #50ff44;
+$dark: #222222;
+$light: #ffffff;
+$baseLine: 10px;
+$lineRatio: 1.2;
+
+%clearGutter {
+  margin: 0;
+  padding: 0;
+}
+
+@function rhythm($level) {
+  @return $baseLine * ceil($level);
+} // 10的倍數
+
+@function line($size) {
+  @return rhythm($size * $lineRatio / $baseLine);
+} // 算行高
+
+@mixin font($size, $line-height: auto) {
+  $line: line($size);
+  font-size: $size;
+  @if $line-height==auto or $line-height < $line {
+    line-height: $line;
+  }
+  @else {
+    line-height: $line-height;
+  }
+}

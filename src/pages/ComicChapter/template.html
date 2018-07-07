@@ -1,0 +1,11 @@
+<div class="comicChapter">
+  <div class="view" v-if="pages.length">
+    <ArrowButton class="prev"
+                 @click.native="prevHandler" />
+                 <!-- .native一定要加,component才會觸發 -->
+    <ImageArea :src="src" />
+    <ArrowButton :direction="1"
+                 class="next"
+                 @click.native="nextHandler" />
+  </div>
+</div>
