@@ -1,0 +1,2 @@
+webpackJsonp([2],{H3uu:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s={render:function(){var e=this.$createElement;return(this._self._c||e)("div",{staticClass:"comics"},[this._v("\r\n  Comics\r\n")])},staticRenderFns:[]};var c=n("VU/8")({name:"comics"},s,!1,function(e){n("dKvM")},"data-v-7066d7b8",null);t.default=c.exports},dKvM:function(e,t){}});
+//# sourceMappingURL=2.7e7d77e1feb6ee936d80.js.map
