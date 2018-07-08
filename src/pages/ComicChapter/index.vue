@@ -1,6 +1,7 @@
 <script>
 import ArrowButton from '@/components/ArrowButton'
 import ImageArea from '@/components/ImageArea'
+import ChapterThumb from '@/components/ChapterThumb'
 
 function getChapterRoute(id, cid) {
   return {
@@ -22,7 +23,8 @@ export default {
   },
   components: {
     ArrowButton,
-    ImageArea
+    ImageArea,
+    ChapterThumb
   },
   computed: {
     src() {
