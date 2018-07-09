@@ -11,6 +11,11 @@ export default {
       list: []
     }
   },
+  methods: {
+    clickHandler(id) {
+      this.$router.push('/comics/' + id)
+    }
+  },
   mounted() {
     axios.get('/api/comics').then(res => {
       this.list = res.data

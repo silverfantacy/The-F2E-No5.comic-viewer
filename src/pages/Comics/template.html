@@ -1,10 +1,5 @@
 <div class="comics">
-  <!-- <ComicItem v-for="item in list"
-             :key="item.id"
-             :cover="item.cover"
-             :title="item.title"
-             :description="item.description"
-             @click.native="clickHandler(item.id)" /> -->
+  <!-- 要使用props-->
   <ComicItem v-for="{id,cover,title,description} in list"
              :key="id"
              :cover="cover"

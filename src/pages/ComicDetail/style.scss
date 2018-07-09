@@ -1,3 +1,92 @@
-.comicDetail{
-  
+@import '../../assets/style/utils';
+.comicDetail {
+  >div {
+    max-width: 960px;
+    margin: 0 auto;
+    line-height: rhythm(3);
+  }
+  .info>ul>li,
+  .description,
+  .chapter {
+    &:before {
+      content: attr(data-title);
+      display: inline-block;
+      width: rhythm(6);
+      letter-spacing: 2px;
+      font-weight: 900;
+    }
+  }
+  .detail {
+    margin: rhythm(3);
+    display: flex;
+    >.cover,
+    >.info {
+      width: rhythm(48);
+    }
+    .cover {
+      background-color: $primary;
+      >img {
+        box-sizing: border-box;
+        width: 50%;
+        border: 4px solid $primary;
+      }
+    }
+    .info {
+      // padding: 0 rhythm(1);
+      // width: 50%;
+      >h2 {
+        box-sizing: border-box;
+        height: rhythm(5);
+        padding: 0 rhythm(2);
+        margin-top: 0;
+        background-color: $primary;
+        font-weight: 900;
+        line-height: rhythm(5);
+      }
+      >ul {
+        list-style: none;
+        padding: 0 rhythm(2);
+        line-height: rhythm(4);
+      }
+    }
+  }
+  .description {
+    margin: rhythm(3);
+    &:before {
+      display: block;
+    }
+  }
+  .chapter {
+    margin: rhythm(3);
+    >ul {
+      box-sizing: border-box;
+      padding: 0;
+      list-style: none;
+      border: 4px solid $primary;
+      background-color: $primary;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      height: 200px;
+      >li {
+        display: block;
+        width: 24%;
+        margin: 0.5%;
+        text-align: center;
+        background-color: $dark;
+        >a {
+          cursor: pointer;
+          display: block;
+          box-sizing: border-box;
+          padding: rhythm(1) 0;
+          text-decoration: none;
+          color: $light;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
 }
