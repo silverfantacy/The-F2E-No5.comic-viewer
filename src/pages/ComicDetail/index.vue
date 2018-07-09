@@ -5,13 +5,22 @@ export default {
   name: 'comicDetail',
   data() {
     return {
-      list: []
+      detail: null
     }
   },
   mounted() {
-    axios.get('/api/detail').then(res => {
-      this.list = res.data
-    })
+    axios
+      .get('/api/detail/' + this.$route.params.id)
+      .then(res => {
+        if (res.data.chapters) {
+          this.detail = res.data
+        } else {
+          this.$router.replace('/comics')
+        }
+      })
+      .catch(() => {
+        this.$router.replace('/comics')
+      })
   }
 }
 </script>
