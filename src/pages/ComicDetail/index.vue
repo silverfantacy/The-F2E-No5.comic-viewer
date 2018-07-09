@@ -1,5 +1,6 @@
 <script>
 import axios from 'axios'
+import ScoreStar from '@/components/ScoreStar'
 
 export default {
   name: 'comicDetail',
@@ -21,6 +22,9 @@ export default {
       .catch(() => {
         this.$router.replace('/comics')
       })
+  },
+  components: {
+    ScoreStar
   }
 }
 </script>

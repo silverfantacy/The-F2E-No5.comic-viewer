@@ -11,7 +11,8 @@
           <li data-title="作者">{{detail.author}}</li>
           <li data-title="狀態">{{detail.status}}</li>
           <li data-title="評分">
-            <span>★★★★★</span>
+            <ScoreStar :score="detail.score" />
+            <!-- <span>★★★★★</span> -->
           </li>
           <!-- <li data-title="類型">{{detail.type}}</li>
         <li data-title="作者">{{detail.author}}</li>
