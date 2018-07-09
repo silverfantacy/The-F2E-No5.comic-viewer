@@ -24,4 +24,4 @@ npm run build --report
 
 ## 目的
 
-練習vue cli
+練習vue cli、componetnts

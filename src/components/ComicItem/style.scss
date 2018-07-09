@@ -1,0 +1,46 @@
+@import '../../assets/style/utils';
+.comicItem {
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  height: rhythm(7);
+  background-color: $light;
+  padding: rhythm(1);
+  overflow: hidden;
+  border-bottom: 1px solid adjust-color($light, $lightness: -5%);
+  background-color: $light;
+  &:hover {
+    background-color: adjust-color($light, $lightness: -5%);
+  }
+  >.cover {
+    // background-image: url(/static/images/1.jpg);
+    display: block;
+    background-color: darkblue;
+    width: rhythm(10);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  >.info {
+    overflow: hidden;
+    color: $dark;
+    margin-left: rhythm(2);
+    width: calc( 100vw - #{rhythm(14)});
+    >.title,
+    >.description {
+      overflow: hidden;
+      margin: rhythm(1) 0;
+      white-space: nowrap;
+      letter-spacing: 0;
+      text-overflow: ellipsis;
+    }
+    .title {
+      @include font(16px);
+      font-weight: bold;
+    }
+    .description {
+      @include font(14px);
+      color: adjust-color($dark, $lightness: 50%);
+    }
+  }
+}

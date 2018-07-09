@@ -1,6 +1,21 @@
 <script>
+import axios from 'axios'
+import ComicItem from '@/components/ComicItem'
 export default {
-  name: 'comics'
+  name: 'comics',
+  components: {
+    ComicItem
+  },
+  data() {
+    return {
+      list: []
+    }
+  },
+  mounted() {
+    axios.get('/api/comics').then(res => {
+      this.list = res.data
+    })
+  }
 }
 </script>
 
